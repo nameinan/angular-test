@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 var myApp= angular.module("routerApp",['ui.router']);
 myApp.config(function($stateProvider, $urlRouterProvider) {
     
@@ -96,9 +96,30 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
         scope:{
         personObject:"=",
         formattedAddressFunction:"&"
+        },
+        compile:function(elem,attr){
+              console.log('Compiling...........');
+              console.log(elem.html());
+            
+           return{
+               
+                pre: function(scope, elements, attr){
+                    console.log('Pre..linkin....');
+                    console.log(elements);
+                },
+                post: function(scope, elements, attr){
+                console.log('Post..linkin....');
+                console.log(elements);
+            }
+               
+               
+           }
+            
+            
+        }
+       
     }
-        
-    };
+
 });
 
 
