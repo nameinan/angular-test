@@ -12,3 +12,8 @@ Normalizdc : consistent to standard
 
 git commit -m 'initial commit'
 git push origin master
+
+
+if not able to staged use this
+git commit -am 'what I changed'
+ git push

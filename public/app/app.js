@@ -22,6 +22,11 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
         .state('third', {
             url: '/third',
             templateUrl: 'public/pages/third.html'     
+        })
+        
+        .state('person', {
+            url: '/person',
+            templateUrl: 'public/pages/persons.html'     
         });
     }).controller('MainController',function($scope){
     
@@ -31,6 +36,29 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
              state:'Maharashtra',
              pin: '412308'
          } ;
+    
+    
+         $scope.people = [{
+             name:'Nandakumar',
+             city:'Pune',
+             state:'Maharashtra',
+             pin: '412308'
+         },{
+             name:'Vedant',
+             city:'Pune',
+             state:'Maharashtra',
+             pin: '412308'
+         },{
+             name:'Meenakshi',
+             city:'Pune',
+             state:'Maharashtra',
+             pin: '412308'
+         },{
+             name:'Naomacha',
+             city:'Pune',
+             state:'Maharashtra',
+             pin: '412308'
+         }] ;
     
          $scope.formattedAddress = function(person){
              return  person.city + ' ' + person.state + ' ' + person.pin;
