@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="routerApp">
+<head>
+ <!--<base href="/">-->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>test page</title>
+   
+</head>
+ <link rel='stylesheet' href="public/bower_components/bootstrap/dist/css/bootstrap.css">
+
+<body >
+
+<header>
+    <a  ui-sref="first"> First</a>
+    <a  ui-sref="second">Second</a>
+    <a  ui-sref="third"> Third</a>
+    
+</header>
+    
+    <div class="container" ng-controller="MainController" >
+      
+      <!-- <div ng-view></div>-->
+        <div ui-view></div>
+    </div>
+</body>
+<script type="text/javascript" src="public/bower_components/angular/angular.js"></script>
+    
+<!--
+    
+<script type="text/javascript" src="public/bower_components/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="public/bower_components/angular-aria/angular-aria.js"></script>
+<script type="text/javascript" src="public/bower_components/angular-material/angular-material.js"></script>
+<script type="text/javascript" src="public/bower_components/angular-messages/angular-messages.js"></script>
+<script type="text/javascript" src="public/bower_components/angular-resource/angular-resource.js"></script>
+    
+-->
+    
+<!--<script type="text/javascript" src="public/bower_components/angular-route/angular-route.js"></script>-->
+<script type="text/javascript" src="public/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</html>
