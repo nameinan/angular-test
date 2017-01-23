@@ -27,8 +27,14 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     
          $scope.person = {
              name:'Nandakumar',
-             address:'Phursungi Pune-412308 '
+             city:'Pune',
+             state:'Maharashtra',
+             pin: '412308'
          } ;
+    
+         $scope.formattedAddress = function(person){
+             return  person.city + ' ' + person.state + ' ' + person.pin;
+         }
     
     }).controller('firstController',function($scope,myService){
     
@@ -60,7 +66,8 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
         templateUrl:'public/pages/address.html',    
         replace:true ,
         scope:{
-        personObject:"="
+        personObject:"=",
+        formattedAddressFunction:"&"
     }
         
     };
