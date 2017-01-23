@@ -93,6 +93,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
         restrict:'AECM', //A:attri,E: ele, C:class, M:Comments
         templateUrl:'public/pages/address.html',    
         replace:true ,
+        transclude: true,
         scope:{
         personObject:"=",
         formattedAddressFunction:"&"
@@ -106,6 +107,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
                  console.log(elements);
             
         }
+       
        
     }
 
