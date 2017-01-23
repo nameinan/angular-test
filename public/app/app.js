@@ -97,24 +97,13 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
         personObject:"=",
         formattedAddressFunction:"&"
         },
-        compile:function(elem,attr){
-              console.log('Compiling...........');
-              console.log(elem.html());
-            
-           return{
-               
-                pre: function(scope, elements, attr){
-                    console.log('Pre..linkin....');
-                    console.log(elements);
-                },
-                post: function(scope, elements, attr){
-                console.log('Post..linkin....');
-                console.log(elements);
-            }
-               
-               
-           }
-            
+        link:function(scope,elements,attrs){
+                  console.log('linking');
+                  console.log(scope);
+                  if(scope.personObject.name=='Vedant')  {
+                      elements.removeAttr('class');
+                  }  
+                 console.log(elements);
             
         }
        
